@@ -1,1 +1,27 @@
 <p>Hello, {{name}}!</p>
+
+<div>
+    <input #q type="text" placeholder="Type your band" />
+    <button (click)="searchArtists(q)">Search!</button>
+</div>
+
+<p>Artists</p>
+<ul style="border: 1px solid tomato;">
+    <li *foreach="#artist in artists">
+        {{artist.name}}
+    </li>
+</ul>
+
+<p>Albums</p>
+<ul style="border: 1px solid green;">
+    <li *foreach="#album in albums">
+        {{album.name}}
+    </li>
+</ul>
+
+<p>Playlists</p>
+<ul style="border: 1px solid blue;">
+    <li *foreach="#playlist in playlists">
+        {{playlist.name}}
+    </li>
+</ul>
